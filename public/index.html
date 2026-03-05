@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Bot Hosting</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS stylesheet -->
+    <title>Hostify - Professional Hosting Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-
-<h2>Discord Bot Code</h2>
-
-<textarea id="code" rows="20" cols="70"></textarea>
-<br><br>
-
-<button onclick="run()">Start Bot</button>
-
-<script>
-function run(){
-    const code = document.getElementById("code").value
-
-    fetch("/run",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify({code:code})
-    })
-}
-</script>
-
+    <header>
+        <div class="container">
+            <h1>Welcome to Hostify</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Your Professional Hosting Solutions</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque justo, varius sit amet pulvinar sed, faucibus at massa. Sed consectetur quam at nisl laoreet, at semper eros varius.</p>
+    </div>
+    <footer>
+        <p>&copy; 2026 Hostify. All rights reserved.</p>
+    </footer>
 </body>
 </html>
