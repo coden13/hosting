@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bot Hosting</title>
+</head>
+<body>
+
+<h2>Discord Bot Code</h2>
+
+<textarea id="code" rows="20" cols="70"></textarea>
+<br><br>
+
+<button onclick="run()">Start Bot</button>
+
+<script>
+function run(){
+    const code = document.getElementById("code").value
+
+    fetch("/run",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({code:code})
+    })
+}
+</script>
+
+</body>
+</html>
